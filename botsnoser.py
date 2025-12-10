@@ -8,7 +8,7 @@ import logging
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-API_TOKEN = 'SYUDA_TOKEN'
+API_TOKEN = '8235129691:AAEug9gTO_75X7JjOwAI9ti1pRX85-KWVQw'
 
 bot = telebot.TeleBot(API_TOKEN)
 
@@ -55,7 +55,7 @@ def send_welcome(message):
 
 @bot.callback_query_handler(func=lambda call: call.data == "channel")
 def callback_channel(call):
-    bot.send_message(call.message.chat.id, "**Channel - @exploitwizard**", parse_mode='Markdown')
+    bot.send_message(call.message.chat.id, "**Channel - https://t.me/no_masky**", parse_mode='Markdown')
 
 @bot.callback_query_handler(func=lambda call: call.data == "input_text")
 def callback_input_text(call):
@@ -80,3 +80,4 @@ def send_messages(message, text):
         logging.error(f'User {message.chat.id} entered an invalid number: {message.text}')
 
 bot.polling()
+
